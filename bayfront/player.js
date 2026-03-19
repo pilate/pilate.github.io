@@ -1017,7 +1017,7 @@ ozx_handler.prototype._on_event = function (b) {
       a.display.hide_dialog();
       break;
     case 'output_play':
-      a.display.show_dialog(ozx_var.DLG_WAIT);
+      // a.display.show_dialog(ozx_var.DLG_WAIT);
       a.display.update();
       break;
     case 'output_pause':
@@ -1026,7 +1026,7 @@ ozx_handler.prototype._on_event = function (b) {
       break;
     case 'seeker_seek':
       if (a.media.seek(b.value) && !a.media.is_paused()) {
-        a.display.show_dialog(ozx_var.DLG_WAIT);
+        // a.display.show_dialog(ozx_var.DLG_WAIT);
         a.display.update()
       }
       break;
@@ -7105,7 +7105,7 @@ ozx_player.prototype.start = function (a) {
   }
   this.started = true;
   this.session.create();
-  this.display.show_dialog(ozx_var.DLG_WAIT);
+  // this.display.show_dialog(ozx_var.DLG_WAIT);
   return true
 };
 ozx_player.prototype.stop = function (c) {
@@ -7199,7 +7199,7 @@ ozx_player.prototype.next_output = function () {
   this.display.clear_toolbar();
   this.display.hide_skipper();
   this.display.hide_weather();
-  this.display.show_dialog(ozx_var.DLG_WAIT);
+  // this.display.show_dialog(ozx_var.DLG_WAIT);
   return this.open_output()
 };
 ozx_player.prototype.open_output = function () {
